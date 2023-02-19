@@ -1,18 +1,13 @@
 import React from 'react';
 import './App.css';
-import AddLink from './components/AddLink'
-import ShowLinks from './components/ShowLinks'
+import AddBookmark from './components/AddBookmark'
+import ShowBookmarks from './components/ShowBookmarks'
 
 class App extends React.Component {
   
   constructor(props) {
     super(props)
     this.state = {bookmarks: JSON.parse(localStorage.getItem("bookmarks"))}
-
-    // can't be called in a class
-    // React.useEffect(() => {
-    //   localStorage.setItem("bookmarks", JSON.stringify(this.state.bookmarks))
-    // }, [this.state.bookmarks])
   }  
 
   // callback from AddLink
@@ -32,9 +27,9 @@ class App extends React.Component {
     return (
       <div className="App">        
         <div>
-          <AddLink addBookmarkCallback={this.addBookmark}/>
+          <AddBookmark addBookmarkCallback={this.addBookmark}/>
           <hr/>        
-          <ShowLinks bookmarks={this.state.bookmarks} />
+          <ShowBookmarks bookmarks={this.state.bookmarks} />
         </div>
       </div>
     );

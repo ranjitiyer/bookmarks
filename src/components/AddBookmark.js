@@ -1,7 +1,7 @@
 import React from 'react';
 import Bookmark from '../model/Bookmark'
 
-class AddLink extends React.Component {
+class AddBookmark extends React.Component {
     constructor() {
         super()
         this.linkRef = React.createRef()
@@ -46,4 +46,4 @@ class AddLink extends React.Component {
     }
 }
 
-export default AddLink
+export default AddBookmark

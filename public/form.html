@@ -1,0 +1,83 @@
+<html lang="en">
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group-1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .form-group-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    label {
+        margin-right: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 300px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    ul li {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    ul li:hover::after {
+        content: "\f138";
+        font-family: "Font Awesome 5 Free";
+        position: relative;
+        left: 0;
+        font-size: 16px;
+    }
+
+    ul li:hover {
+        color: #4CAF50;
+    }
+</style>
+
+<body>
+    <form>
+        <div class="form-group-1">
+            <input type="text" id="link" placeholder="Enter link" />
+        </div>
+        <div class="form-group-2">
+            <input type="text" id="label" placeholder="Enter label" />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+</html>

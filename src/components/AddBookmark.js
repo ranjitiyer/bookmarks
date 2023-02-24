@@ -5,7 +5,7 @@ class AddBookmark extends React.Component {
     constructor() {
         super()
         this.linkRef = React.createRef()
-        this.labelRef = React.createRef()            
+        this.labelRef = React.createRef()
     }
 
     submitNewBookmark = () => {
@@ -31,17 +31,15 @@ class AddBookmark extends React.Component {
 
     render() {
         return (
-            <div className="addLinksDiv">
-                <label htmlFor="inputLinkId" style={{paddingRight: 8}}>Link:</label>
-                <input type="text" id="inputLinkId" ref={this.linkRef}></input>
-                <br />
-                <label htmlFor="inputLabelId">Label:</label>
-                <input id="inputLabelId" type="text" ref={this.labelRef}></input>
-                <br />
-                <button className="submitButton"
-                    type="button"  onClick={this.submitNewBookmark}>Submit
-                </button>
-            </div>
+            <form>
+                <div className="form-group-1">
+                    <input type="text" id="inputLinkId" ref={this.linkRef} placeholder="Enter link"></input>
+                </div>
+                <div className="form-group-1">
+                    <input id="inputLabelId" type="text" ref={this.labelRef} placeholder="Enter label"></input>
+                </div>
+                <button className="submitButton" type="button" onClick={this.submitNewBookmark}>Add</button>
+            </form>
         )
     }
 }
